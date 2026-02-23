@@ -1,0 +1,17 @@
+app:
+  interval: 10m
+
+binance:
+  api_key: ""
+  api_secret: ""
+
+strategy:
+  symbols:
+    - "BTCUSDT"
+    - "ETHUSDT"
+  funding_rate_threshold: 0.001 # Abs 0.1%
+  oi_surge_ratio: 2.0
+
+telegram:
+  bot_token: ""
+  chat_id: ""
