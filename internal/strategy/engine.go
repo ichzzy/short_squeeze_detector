@@ -1,7 +1,6 @@
 package strategy
 
 import (
-	"fmt"
 	"log"
 	"sync"
 	"time"
@@ -46,7 +45,6 @@ func (e *Engine) Process(data *model.MarketData) *model.AlertEvent {
 	}
 	e.history[data.Symbol] = records
 
-	fmt.Println(len(records))
 	// 若紀錄不足 M 筆，先不進行計算
 	if len(records) < averageWindow {
 		return nil
